@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import './Write.css';
 
 function List(){
     const navigate = useNavigate();
@@ -14,6 +15,10 @@ function List(){
         navigate('/write');
     }
 
+    const goToUpdate=()=>{
+        navigate('/update');
+    }
+
     return(
     <>
         <h2>LIST</h2>
@@ -22,6 +27,9 @@ function List(){
                 <li key={index}>
                     <h3>{posts.title}</h3>
                     <p>{posts.content}</p>
+                    <div className='update-btn'>
+                        <button onClick={goToUpdate}>수정</button>
+                    </div>
                 </li>
             ))}
         </ul>
