@@ -1,0 +1,9 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.submit-btn,
+.cancel-btn {
+    margin-right: 10px; /* 버튼 간격을 조절할 수 있습니다. */
+}
